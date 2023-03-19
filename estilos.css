@@ -90,8 +90,8 @@ body {
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(4,1fr);
-	width: 600px;
+	grid-template-columns: repeat(3, 1fr);
+	width: 90vw;
 	aspect-ratio: 1;
 	gap: 20px;
 
@@ -103,11 +103,16 @@ body {
 	transition: all .8s;
 	cursor: pointer;
 	overflow: hidden;
+	width: 0;
+	height: 0;
+	min-width: 100%;
+	min-height: 100%;
+	aspect-ratio: 1;
 }
 
 .card h2 {
 	position: absolute;
-	bottom: 0;
+	top: 0;
 	padding: .2em .5em;
 	background: linear-gradient(to right, var(--clr-light-trans), transparent);
 	width: 100%;
@@ -116,27 +121,15 @@ body {
 }
 
 .card img {
+	min-height: 100%;
 	transition: all .8s;
 	object-fit: cover;
 	cursor: pointer;
 
 }
 
-.card img:hover {
-	transform: translateY(-2em) scale(1.8);
-	z-index: -1
-}
-
 .card:hover {
-	width: 500px;
-}
+	width: 45vw;
+	height: 45vw;
 
-img{
-object-fit: cover;
-min-width: 100%;
-min-height: 100%;
-}
-img:hover {
-width: 500px;
-height: 500px;
 }
